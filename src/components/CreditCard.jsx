@@ -6,18 +6,20 @@ function CreditCard({card}){
             const divStyle = {
                 backgroundColor: card.bgColor,
                 width: "60vw",
-                padding: "10px" 
+                maxWidth: "400px",
+                padding: "10px",
+                margin: "auto"
               };
             return (
                 <>
-                <br></br>
-                <div style={divStyle}>
-                    <p>{card.type}</p>
-                    <p>**** **** **** {card.number.slice((card.number.length -4),(card.number.length))}</p>
-                    <p>Expires 0{card.expirationMonth}/{card.expirationYear - 2000} {card.bank}</p>
-                    <p>{card.owner}</p>
-                </div> 
-            </>
+                    <br></br>
+                    <div style={divStyle}>
+                        <p>{card.type}</p>
+                        <p>**** **** **** {card.number.slice((card.number.length -4),(card.number.length))}</p>
+                        <p>Expires 0{card.expirationMonth}/{card.expirationYear - 2000} {card.bank}</p>
+                        <p>{card.owner}</p>
+                    </div> 
+                </>
 
             )
         })
